@@ -7,25 +7,25 @@ public class PetrolCalculatorDebug {
 
     public void calculate() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите тип топлива: 1 - АИ-92, 2 - АИ-95, 3 - АИ-100 => ");
+        System.out.print("Enter fuel type: 1 — 92 octane gas, 2 — 95 octane gas, 3 — 100 octane gas => ");
         int petrolType = scanner.nextInt();
-        System.out.print("Введите количество литров => ");
+        System.out.print("Enter the number of liters => ");
         double volume = scanner.nextDouble();
-        System.out.print("Введите скидку в диапазоне 0..100 => ");
+        System.out.print("Enter a discount in the range of 0..100 => ");
         double discount = scanner.nextDouble() / 100;
 
         if (petrolType == 1) {
             Ai92Calculator calculator = new Ai92Calculator();
             double price = calculator.calculate(volume, discount);
-            System.out.println("Стоимость " + volume + " литров АИ-92 = " + price + "₽");
+            System.out.println("The price of " + volume + " liters of the 92 octane gas is " + price + "$");
         } else if (petrolType == 2) {
             Ai95Calculator calculator = new Ai95Calculator();
             double price = calculator.calculate(volume, discount);
-            System.out.println("Стоимость " + volume + " литров АИ-95 = " + price + "₽");
+            System.out.println("The price of " + volume + " liters of the 95 octane gas is = " + price + "$");
         } else if (petrolType == 3) {
             Ai100Calculator calculator = new Ai100Calculator();
             double price = calculator.calculate(volume, discount);
-            System.out.println("Стоимость " + volume + " литров АИ-100 = " + price + "₽");
+            System.out.println("The price of " + volume + " liters of the 100 octane gas is = " + price + "$");
         }
     }
 }
