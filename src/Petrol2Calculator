@@ -1,4 +1,4 @@
-class Ai95Calculator {
+class Petrol2Calculator {
     double price = 46.35;
 
     public double calculate(double volume, double discount) {
