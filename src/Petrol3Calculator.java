@@ -1,5 +1,5 @@
-class Ai100Calculator {
-    double price = 51.55;
+class Petrol3Calculator {
+    double price = 3.55;
     double tax = 0.02;
 
     public double calculate(double volume, double discount) {
